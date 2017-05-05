@@ -1,7 +1,7 @@
-Ionic App Base
+Auto Shop Demo - Mobile
 =====================
 
-This is the base template for Ionic starter apps.
+This is a demo of an auto shop car tracker. 
 
 ## Using this project
 
@@ -14,7 +14,5 @@ $ npm install -g ionic
 Then run:
 
 ```bash
-$ ionic start myApp
+$ ionic serve
 ```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/docs/v2/getting-started/) page.
