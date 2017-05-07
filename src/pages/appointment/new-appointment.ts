@@ -26,4 +26,8 @@ export class NewAppointmentModal {
 		this.viewCtrl.dismiss(this.appointment);
 	}
 
+	close() {
+		this.viewCtrl.dismiss();
+	}
+
 }
