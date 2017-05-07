@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
-import { NewAppointmentModal } from './new-appointment'
+import { NewAppointmentModal } from './new-appointment';
+import { AppointmentDetailModal } from './appointment-detail';
 
 @Component({
 	selector: 'page-appointment',
@@ -25,6 +26,11 @@ export class AppointmentPage {
 			}
 		});
 		newAppmntModal.present();
+	}
+
+	appointmentDetail(appointment) {
+		const appointmentDetailModal = this.modalCtrl.create(AppointmentDetailModal, appointment);
+		appointmentDetailModal.present();
 	}
 
 }

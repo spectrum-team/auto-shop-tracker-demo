@@ -48,6 +48,10 @@
 			</ion-row>
 		</ion-grid>
 
+		<ion-item>
+			<ion-label>Comentarios</ion-label>
+			<ion-textarea [(ngModel)]="appointment.comments"></ion-textarea>
+		</ion-item>
 
 	</ion-list>
 	<button ion-button block (click)="create()">Crear Cita</button>

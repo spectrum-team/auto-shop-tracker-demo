@@ -4,14 +4,14 @@
       <ion-icon name="menu"></ion-icon>
     </button>
         <ion-title>
-            Appointments
+            Citas
         </ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <p *ngIf="appointments.length < 1">No tiene citas programadas</p>
-    <ion-card *ngFor="let a of appointments">
+    <ion-card *ngFor="let a of appointments" (click)="appointmentDetail(a)">
         <ion-card-header>
             {{a.date}}
         </ion-card-header>
