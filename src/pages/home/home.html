@@ -1,18 +1,52 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='navbarColor'>
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.
-  </p>
+<ion-content color='navbarColor'>
+  <ion-list>
+    <ion-list-header style="background-color:#e91e63; color:white">
+      Vehiculos en taller
+    </ion-list-header>
+    <ion-item *ngFor="let car of CarList">
+      <ion-grid>
+        <ion-row>
+          {{car.Modelo}}
+        </ion-row>
+        <ion-row>
+          <ion-badge item-right>{{car.Status}}</ion-badge>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-list-header style="background-color:#009688; color:white">
+      Noticias
+    </ion-list-header>
+    <ion-item *ngFor="let news of NewsList">
+      <ion-grid>
+        <ion-row>
+          {{news.Title}}
+        </ion-row>
+        <ion-row>
+          <ion-badge item-right>{{news.Created}}</ion-badge>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-list-header style="background-color:#3f51b5; color:white">
+      Eventos
+    </ion-list-header>
+    <ion-item *ngFor="let event of EventList">
+      <ion-grid>
+        <ion-row>
+          {{event.Title}}
+        </ion-row>
+        <ion-row>
+          <ion-badge item-right>{{event.EventDateTime}}</ion-badge>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
 </ion-content>
