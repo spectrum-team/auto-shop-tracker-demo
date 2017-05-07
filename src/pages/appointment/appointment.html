@@ -10,26 +10,17 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
+    <ion-card *ngFor="let a of appointments">
         <ion-card-header>
-            Martes 9 de Mayo 2017
+            {{a.date}}
         </ion-card-header>
         <ion-card-content>
-            Porsche Panamera. Cambio de Aceite
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <ion-card-header>
-            Viernes 12 de Mayo 2017
-        </ion-card-header>
-        <ion-card-content>
-            Porsche 911 Turbo. Otros - Sonido del motor
+            {{a.vehicle}}. {{a.reason}} - {{a.comments}}
         </ion-card-content>
     </ion-card>
 
     <ion-fab right bottom>
-        <button ion-fab><ion-icon name="add"></ion-icon></button>
+        <button ion-fab (click)="newAppointment()"><ion-icon name="add"></ion-icon></button>
     </ion-fab>
 
 </ion-content>

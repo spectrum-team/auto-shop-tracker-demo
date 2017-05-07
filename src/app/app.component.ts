@@ -22,7 +22,7 @@ export class MyApp {
 
     this.views = [
       {title: 'Home', component: HomePage},
-      {title: 'Appointments', component: AppointmentPage},
+      {title: 'Citas', component: AppointmentPage},
       {title: 'About', component: AboutPage},
       {title: 'Contact', component: ContactPage}
     ];    
