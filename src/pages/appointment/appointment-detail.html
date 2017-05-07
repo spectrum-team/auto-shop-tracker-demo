@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Detalle de la Cita
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-item>
+		<ion-icon name="car" item-left large></ion-icon>
+		<h2>{{appointment.vehicle}}</h2>
+		<p>{{appointment.kms}} Kms</p>
+	</ion-item>
+	<ion-item>
+		<!--<ion-icon name="car" item-left large></ion-icon>-->
+		<h3>{{appointment.date}} {{appointment.time}}</h3>
+		<h4>{{appointment.reason}}</h4>
+		<p>{{appointment.comments}}</p>
+	</ion-item>
+
+	<ion-item>
+		<button ion-button block (click)="close()">Cerrar</button>
+	</ion-item>
+</ion-content>
