@@ -17,7 +17,12 @@ export class AppointmentPage {
 	newAppointment() {
 		const newAppmntModal = this.modalCtrl.create(NewAppointmentModal);
 		newAppmntModal.onDidDismiss(res => {
-			(res && res.vehicle) && this.appointments.push(res);
+			if (res) {
+				const formatDate = new Date(res.date.replace(/-/g, '\/'));
+				const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				res.date = formatDate.toLocaleString('es-419', options);
+				this.appointments.push(res);
+			}
 		});
 		newAppmntModal.present();
 	}

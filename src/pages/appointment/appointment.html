@@ -10,13 +10,13 @@
 </ion-header>
 
 <ion-content padding>
-    {{appointments.length < 1 && 'No tiene citas programadas'}}
+    <p *ngIf="appointments.length < 1">No tiene citas programadas</p>
     <ion-card *ngFor="let a of appointments">
         <ion-card-header>
             {{a.date}}
         </ion-card-header>
         <ion-card-content>
-            {{a.vehicle}}. {{a.reason}} - {{a.comments}}
+            {{a.vehicle}}. {{a.reason}}
         </ion-card-content>
     </ion-card>
 
