@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 // import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { AppointmentPage } from "../pages/appointment/appointment";
 import { NewAppointmentModal } from "../pages/appointment/new-appointment";
 import { AppointmentDetailModal } from "../pages/appointment/appointment-detail";
@@ -22,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     LoginPage,
+    RegisterPage,
     AppointmentPage,
     NewAppointmentModal,
     AppointmentDetailModal
@@ -37,6 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     LoginPage,
+    RegisterPage,
     AppointmentPage,
     NewAppointmentModal,
     AppointmentDetailModal

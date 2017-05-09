@@ -7,6 +7,7 @@ import { AboutPage } from "../pages/about/about";
 import { ContactPage } from "../pages/contact/contact";
 import { AppointmentPage } from "../pages/appointment/appointment";
 import { LoginPage } from "../pages/login/login";
+import { RegisterPage } from "../pages/register/register";
 
 
 @Component({
@@ -27,6 +28,7 @@ export class MyApp {
       {title: 'About', component: AboutPage},
       {title: 'Contact', component: ContactPage},
       {title: 'Log Out', component: LoginPage}
+      
     ];
   }
 
