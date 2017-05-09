@@ -6,6 +6,7 @@ import { HomePage } from "../pages/home/home";
 import { AboutPage } from "../pages/about/about";
 import { ContactPage } from "../pages/contact/contact";
 import { AppointmentPage } from "../pages/appointment/appointment";
+import { LoginPage } from "../pages/login/login";
 
 
 @Component({
@@ -24,8 +25,9 @@ export class MyApp {
       {title: 'Home', component: HomePage},
       {title: 'Citas', component: AppointmentPage},
       {title: 'About', component: AboutPage},
-      {title: 'Contact', component: ContactPage}
-    ];    
+      {title: 'Contact', component: ContactPage},
+      {title: 'Log Out', component: LoginPage}
+    ];
   }
 
   initApp() {
