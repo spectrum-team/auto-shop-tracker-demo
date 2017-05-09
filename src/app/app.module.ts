@@ -12,6 +12,7 @@ import { RegisterPage } from '../pages/register/register';
 import { AppointmentPage } from "../pages/appointment/appointment";
 import { NewAppointmentModal } from "../pages/appointment/new-appointment";
 import { AppointmentDetailModal } from "../pages/appointment/appointment-detail";
+import { EventPage } from "../pages/event/event"
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     AppointmentPage,
     NewAppointmentModal,
-    AppointmentDetailModal
+    AppointmentDetailModal,
+    EventPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegisterPage,
     AppointmentPage,
     NewAppointmentModal,
-    AppointmentDetailModal
+    AppointmentDetailModal,
+    EventPage
   ],
   providers: [
     StatusBar,

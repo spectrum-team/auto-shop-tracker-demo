@@ -1,13 +1,14 @@
 //@ts-check
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Nav } from 'ionic-angular';
+import { EventPage } from "../event/event"
 
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html'
 })
 export class HomePage {
-	constructor(public navCtrl: NavController) { }
+	constructor(public navCtrl: NavController, public nav: Nav) { }
 
 	public CarList = [
 		{ Modelo: "718 Cayman S", Status: "Listo para entrega" },
@@ -27,4 +28,8 @@ export class HomePage {
 		{ Title: "Flexi Móvil BHD", EventDateTime: "30/Junio/2017 - 7:30 PM" },
 		{ Title: "Porsche Club", EventDateTime: "7/Julio/2017 - 8:30 PM" }
 	];
+
+	EventDetail(){
+		this.nav.push(EventPage)
+	}
 }

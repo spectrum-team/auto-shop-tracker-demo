@@ -15,7 +15,7 @@
     <ion-item *ngFor="let car of CarList">
       <ion-grid>
         <ion-row>
-          {{car.Modelo}}
+           {{car.Modelo}}
         </ion-row>
         <ion-row>
           <ion-badge item-right>{{car.Status}}</ion-badge>
@@ -41,7 +41,7 @@
     <ion-item *ngFor="let event of EventList">
       <ion-grid>
         <ion-row>
-          {{event.Title}}
+          <button ion-button clear (click)="EventDetail()">{{event.Title}}</button>
         </ion-row>
         <ion-row>
           <ion-badge item-right>{{event.EventDateTime}}</ion-badge>
