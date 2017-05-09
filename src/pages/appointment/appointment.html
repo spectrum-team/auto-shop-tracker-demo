@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>
+            Citas
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p *ngIf="appointments.length < 1">No tiene citas programadas</p>
+    <ion-card *ngFor="let a of appointments" (click)="appointmentDetail(a)">
+        <ion-card-header>
+            {{a.date}}
+        </ion-card-header>
+        <ion-card-content>
+            {{a.vehicle}}. {{a.reason}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab right bottom>
+        <button ion-fab (click)="newAppointment()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+</ion-content>
